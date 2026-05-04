@@ -1,0 +1,475 @@
+---
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "/insolvencia", label: "Insolvencia" },
+  { href: "/derecho-de-danos", label: "Derecho de Daños" },
+];
+---
+
+<!-- Premium Floating Glass Navbar - Double-Bezel Architecture -->
+<header class="fixed-nav" id="main-nav">
+  <!-- Floating Glass Pill -->
+  <nav class="nav-pill">
+    <!-- Logo -->
+    <a href="/" class="logo-link">
+      <img src="/logo.png" alt="Objetivo Legal" class="logo-img" />
+      <span class="logo-text">
+        <span class="logo-objetivo">Objetivo</span>
+        <span class="logo-legal">Legal</span>
+      </span>
+    </a>
+
+    <!-- Desktop Navigation - Staggered reveal on load -->
+    <ul class="nav-links">
+      {navLinks.map((link, index) => (
+        <li class="nav-link-item" style={`--stagger-delay: ${0.1 + index * 0.05}s`}>
+          <a href={link.href} class="nav-link">
+            {link.label}
+            <span class="nav-link-underline"></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="#contacto" class="nav-cta">
+      <span>Contactar</span>
+      <span class="nav-cta-icon">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+
+    <!-- Mobile Hamburger Toggle - Morphs to X -->
+    <button 
+      id="menu-toggle" 
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Alternar menú"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Full-Screen Glass Overlay -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-content">
+      <ul class="mobile-nav-links">
+        {navLinks.map((link, index) => (
+          <li class="mobile-nav-link-item" style={`--stagger-delay: ${0.15 + index * 0.1}s`}>
+            <a href={link.href} class="mobile-nav-link">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href="#contacto" class="mobile-cta">
+        Contactar Ahora
+      </a>
+      <p class="mobile-contact-note">
+        Respuesta en menos de 24 horas
+      </p>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* === FIXED POSITIONING === */
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  .fixed-nav > * {
+    pointer-events: auto;
+  }
+
+  /* === FLOATING GLASS PILL === */
+  .nav-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75rem 1rem 0.75rem 1.25rem;
+    background: rgba(255, 248, 249, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 9999px;
+    box-shadow: 
+      0 8px 32px -8px rgba(64, 28, 52, 0.08),
+      0 2px 8px -2px rgba(64, 28, 52, 0.04),
+      inset 0 1px 1px rgba(255, 255, 255, 0.8);
+    animation: navSlideDown 0.8s cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+
+  @keyframes navSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @supports not (backdrop-filter: blur(20px)) {
+    .nav-pill {
+      background: rgba(255, 248, 249, 0.96);
+    }
+  }
+
+  /* === LOGO === */
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none;
+    transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .logo-link:hover {
+    opacity: 0.85;
+  }
+
+  .logo-img {
+    height: 2.125rem;
+    width: auto;
+    transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .logo-link:hover .logo-img {
+    transform: scale(1.04);
+  }
+
+  .logo-text {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .logo-objetivo {
+    color: #401C34;
+  }
+
+  .logo-legal {
+    color: #9A8C5B;
+  }
+
+  /* === NAV LINKS === */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link-item {
+    opacity: 0;
+    animation: navLinkReveal 0.6s cubic-bezier(0.32, 0.72, 0, 1) calc(var(--stagger-delay) + 0.3s) both;
+  }
+
+  @keyframes navLinkReveal {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #401C34;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    transition: color 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .nav-link:hover {
+    color: #9A8C5B;
+  }
+
+  .nav-link-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #9A8C5B;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .nav-link:hover .nav-link-underline {
+    transform: scaleX(1);
+  }
+
+  /* === NAV CTA === */
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    background: #401C34;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    box-shadow: 0 4px 12px rgba(64, 28, 52, 0.2);
+    opacity: 0;
+    animation: navLinkReveal 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.5s both;
+  }
+
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(64, 28, 52, 0.3);
+    background: #2a1524;
+  }
+
+  .nav-cta:active {
+    transform: scale(0.97);
+  }
+
+  .nav-cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .nav-cta:hover .nav-cta-icon {
+    transform: translate-x-rotate-diagonal;
+  }
+
+  /* === HAMBURGER TOGGLE === */
+  .menu-toggle {
+    display: none;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #401C34;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .hamburger-line:nth-child(1) {
+    margin-bottom: 5px;
+  }
+
+  .hamburger-line:nth-child(2) {
+    margin-bottom: 5px;
+  }
+
+  /* Morph to X */
+  .menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* === MOBILE MENU === */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 248, 249, 0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+    z-index: 99;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-content {
+    text-align: center;
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mobile-nav-link-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .mobile-menu.open .mobile-nav-link-item {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--stagger-delay) + 0.1s);
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 1rem 2rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #401C34;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobile-nav-link:hover {
+    color: #9A8C5B;
+  }
+
+  .mobile-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    background: #401C34;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .mobile-menu.open .mobile-cta {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.45s;
+  }
+
+  .mobile-cta:hover {
+    background: #2a1524;
+    transform: scale(1.02);
+  }
+
+  .mobile-contact-note {
+    margin-top: 1.5rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(64, 28, 52, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .mobile-menu.open .mobile-contact-note {
+    opacity: 1;
+    transition-delay: 0.55s;
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .nav-links,
+    .nav-cta {
+      display: none !important;
+    }
+
+    .menu-toggle {
+      display: block !important;
+    }
+
+    .nav-pill {
+      margin: 1rem auto 0;
+      padding: 0.625rem 1rem 0.625rem 1.125rem;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+
+  if (mobileMenu && menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("open");
+      
+      if (isOpen) {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      } else {
+        mobileMenu.classList.add("open");
+        menuToggle.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+    });
+
+    // Close on link click
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      });
+    });
+  }
+</script>

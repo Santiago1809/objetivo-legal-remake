@@ -1,0 +1,9 @@
+{
+  "project": "objetivo-legal-remake",
+  "stack": "Astro starter with Tailwind CSS 4",
+  "tests": false,
+  "artifact_store": "engram",
+  "execution_mode": "automatic",
+  "delivery_mode": "ask-on-risk",
+  "detected_at": "2026-05-03T00:00:00Z"
+}

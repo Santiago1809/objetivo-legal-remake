@@ -1,0 +1,178 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/ui/Navbar.astro";
+import Footer from "../components/ui/Footer.astro";
+import ContactForm from "../components/islands/ContactForm.astro";
+---
+
+<Layout
+  title="Derecho de Daños y Responsabilidad Civil | Objetivo Legal"
+  description="Abogados especializados en derecho de daños en Medellín. Reclamamos la indemnización que mereces por daños materiales, personales y morales."
+>
+  <Navbar />
+
+  <main style="padding-top: 5rem;">
+    <!-- Hero -->
+    <section class="relative min-h-[751px] flex flex-col justify-end overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.pexels.com/photos/5668481/pexels-photo-5668481.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1080&w=1920" alt="Martillo de juez sobre documentos legales" class="w-full h-full object-cover grayscale-[20%] brightness-[40%]" />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/60 to-transparent lg:via-primary-container/40"></div>
+      </div>
+
+      <div style="padding: 4rem 1.5rem; max-width: 80rem; margin: 0 auto; width: 100%; position: relative; z-index: 10;">
+        <div style="max-width: 40rem;">
+          <!-- Badge -->
+          <div style="display: inline-block; padding: 0.25rem 0.75rem; margin-bottom: 1.5rem; background: rgba(154, 140, 91, 0.1); border-left: 2px solid var(--color-secondary);">
+            <span style="font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-secondary-fixed-dim, #d6c690);">Responsabilidad Civil</span>
+          </div>
+
+          <h1 style="font-family: 'Noto Serif', serif; font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 1.5rem;">
+            Tu patrimonio y tu salud merecen protección legal
+          </h1>
+
+          <p style="font-family: 'Manrope', sans-serif; font-size: 1.125rem; color: var(--color-surface-container-highest, #e9e0e3); line-height: 1.625; margin-bottom: 2.5rem; font-weight: 300;">
+            Si has sufrido daños por culpa de terceros, tienes derecho a una indemnización justa. Te representamos para reclamar lo que te corresponde por daños materiales, personales y morales.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a href="#contacto" style="display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; background-color: var(--color-primary-container); color: white; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1rem; border-radius: 0.375rem; text-decoration: none; transition: background-color 0.3s;">
+              Consulta Gratis
+            </a>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6);">
+              Asesoría Formal: Virtual $100k | Presencial $150k
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section style="padding: 4rem 1.5rem; background-color: var(--color-surface-container-low);">
+      <div style="max-width: 80rem; margin: 0 auto;">
+        <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+          <div style="flex: 1 1 400px; min-width: 300px;">
+            <span style="display: inline-block; margin-bottom: 1rem; color: var(--color-secondary); font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+              Responsabilidad Civil
+            </span>
+            <h1 style="font-family: 'Noto Serif', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--color-primary-container); line-height: 1.2; margin-bottom: 1.5rem;">
+              Tu patrimonio y tu salud merecen protección legal
+            </h1>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 1.125rem; color: rgba(64, 28, 52, 0.7); line-height: 1.625; margin-bottom: 2rem;">
+              Si has sufrido daños por culpa de terceros, tienes derecho a una indemnización justa. Te representamos para reclamar lo que te corresponde por daños materiales, personales y morales.
+            </p>
+            <a href="#contacto" style="display: inline-flex; align-items: center; padding: 1rem 2rem; background-color: var(--color-primary-container); color: white; font-family: 'Manrope', sans-serif; font-weight: 600; border-radius: 0.375rem; text-decoration: none; transition: background-color 0.2s;">
+              Consulta Gratis
+            </a>
+          </div>
+          <div style="flex: 1 1 400px; min-width: 300px; background-color: rgba(64, 28, 52, 0.05); border-radius: 1rem; padding: 2.5rem;">
+            <h2 style="font-family: 'Noto Serif', serif; font-size: 1.25rem; font-weight: 700; color: var(--color-primary-container); margin-bottom: 1.5rem;">Tipos de daños que reclamamos</h2>
+            <ul style="display: flex; flex-direction: column; gap: 1rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <div>
+                  <strong style="color: var(--color-primary-container); font-family: 'Manrope', sans-serif;">Daños materiales</strong>
+                  <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">Reparación o reemplazo de bienes afectados</p>
+                </div>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <div>
+                  <strong style="color: var(--color-primary-container); font-family: 'Manrope', sans-serif;">Daños personales</strong>
+                  <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">Lesiones, incapacidad y gastos médicos</p>
+                </div>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <div>
+                  <strong style="color: var(--color-primary-container); font-family: 'Manrope', sans-serif;">Daños morales</strong>
+                  <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">Sufrimiento psicológico y afectaciones emocionales</p>
+                </div>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <div>
+                  <strong style="color: var(--color-primary-container); font-family: 'Manrope', sans-serif;">Lucro cesante</strong>
+                  <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">Ingresos dejados de percibir por el daño</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section style="padding: 4rem 1.5rem; background-color: var(--color-background);">
+      <div style="max-width: 48rem; margin: 0 auto;">
+        <h2 style="font-family: 'Noto Serif', serif; font-size: 1.875rem; font-weight: 700; color: var(--color-primary-container); margin-bottom: 2rem; text-align: center;">
+          ¿Cuándo puedes reclamar indemnización?
+        </h2>
+
+        <p style="font-family: 'Manrope', sans-serif; color: var(--color-on-surface-variant); line-height: 1.625; margin-bottom: 1.5rem;">
+          El Código Civil colombiano establece que quien cause un daño a otro está obligado a repararlo. Esto aplica a situaciones tan diversas como accidentes de tránsito, responsabilidad médica, productos defectuosos, o cualquier otra actividad que cause perjuicios.
+        </p>
+
+        <h3 style="font-family: 'Noto Serif', serif; font-size: 1.25rem; font-weight: 700; color: var(--color-primary-container); margin-top: 2.5rem; margin-bottom: 1rem;">Casos que manejamos</h3>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div style="flex: 1 1 280px; padding: 1.25rem; background-color: var(--color-surface-container); border-radius: 0.75rem;">
+            <h4 style="font-family: 'Noto Serif', serif; font-weight: 700; color: var(--color-primary-container); margin-bottom: 0.25rem;">Accidentes de tránsito</h4>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">Atropellos, colisiones y demás accidentes vehiculares</p>
+          </div>
+          <div style="flex: 1 1 280px; padding: 1.25rem; background-color: var(--color-surface-container); border-radius: 0.75rem;">
+            <h4 style="font-family: 'Noto Serif', serif; font-weight: 700; color: var(--color-primary-container); margin-bottom: 0.25rem;">Responsabilidad médica</h4>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">Errores clínicos, cirugías fallidas, diagnóstico tardío</p>
+          </div>
+          <div style="flex: 1 1 280px; padding: 1.25rem; background-color: var(--color-surface-container); border-radius: 0.75rem;">
+            <h4 style="font-family: 'Noto Serif', serif; font-weight: 700; color: var(--color-primary-container); margin-bottom: 0.25rem;">Productos defectuosos</h4>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">Bienes que causan daños por fallos de fabricación</p>
+          </div>
+          <div style="flex: 1 1 280px; padding: 1.25rem; background-color: var(--color-surface-container); border-radius: 0.75rem;">
+            <h4 style="font-family: 'Noto Serif', serif; font-weight: 700; color: var(--color-primary-container); margin-bottom: 0.25rem;">Accidentes laborales</h4>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">LES, ARP, enfermedades profesionales</p>
+          </div>
+        </div>
+
+        <h3 style="font-family: 'Noto Serif', serif; font-size: 1.25rem; font-weight: 700; color: var(--color-primary-container); margin-top: 2.5rem; margin-bottom: 1rem;">Elementos de la responsabilidad</h3>
+
+        <ol style="display: flex; flex-direction: column; gap: 1rem; padding: 0; margin: 0; list-style: none;">
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">1</span>
+            <div><strong style="color: var(--color-primary-container);">Conducta dañina:</strong> Una acción u omisión que causa el perjuicio</div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">2</span>
+            <div><strong style="color: var(--color-primary-container);">Daño:</strong> La pérdida o perjuicio efectivamente sufrido</div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">3</span>
+            <div><strong style="color: var(--color-primary-container);">Nexo causal:</strong> Relación entre la conducta y el daño producido</div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">4</span>
+            <div><strong style="color: var(--color-primary-container);">Imputabilidad:</strong> Capacidad de atribuir la responsabilidad al agente</div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 3rem 1.5rem; background-color: var(--color-primary-container);">
+      <div style="max-width: 80rem; margin: 0 auto; text-align: center;">
+        <h2 style="font-family: 'Noto Serif', serif; font-size: 1.875rem; font-weight: 700; color: white; margin-bottom: 1rem;">
+          ¿Has sufrido un daño por culpa de terceros?
+        </h2>
+        <p style="font-family: 'Manrope', sans-serif; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+          Evalúa gratuitamente tu caso y conoce tus derechos.
+        </p>
+        <a href="#contacto" style="display: inline-flex; align-items: center; padding: 1rem 2rem; background-color: var(--color-secondary); color: white; font-family: 'Manrope', sans-serif; font-weight: 700; border-radius: 0.375rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: opacity 0.2s;">
+          Solicitar Consulta Gratuita
+        </a>
+      </div>
+    </section>
+
+    <ContactForm />
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,363 @@
+---
+---
+
+<!-- Premium Hero - Editorial Luxury Vibe with Double-Bezel Architecture -->
+<section class="hero-section">
+  <!-- Full background image with gradient overlay -->
+  <div class="hero-bg">
+    <img 
+      src="https://images.pexels.com/photos/12127531/pexels-photo-12127531.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1080&w=1920" 
+      alt="Skyline de Medellín al atardecer con edificio Coltejer" 
+      class="hero-bg-img"
+    />
+    <div class="hero-gradient"></div>
+  </div>
+
+  <!-- Decorative ambient orbs -->
+  <div class="hero-orb hero-orb-right"></div>
+  <div class="hero-orb hero-orb-bottom"></div>
+
+  <!-- Content - Left aligned, asymmetric -->
+  <div class="hero-content">
+    <!-- Double-Bezel Badge -->
+    <div class="hero-badge">
+      <div class="badge-outer">
+        <div class="badge-inner">
+          <span class="badge-dot"></span>
+          <span class="badge-text">Especialistas en Medellín</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title - Noto Serif, dramatic scale -->
+    <h1 class="hero-title">
+      Expertos en<br/>
+      <span class="hero-title-accent">Derecho de Daños</span><br/>
+      e Insolvencia
+    </h1>
+
+    <!-- Subtitle - Manrope -->
+    <p class="hero-subtitle">
+      Defendemos sus derechos con integridad y excelencia jurídica, brindando soluciones estratégicas a crisis financieras y litigios civiles.
+    </p>
+
+    <!-- CTA Group -->
+    <div class="hero-cta-group">
+      <a href="#contacto" class="hero-cta">
+        <span>Primer Acercamiento Gratuito</span>
+        <!-- Trailing icon in nested circle -->
+        <span class="cta-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </a>
+      
+      <p class="hero-cta-note">
+        <span class="cta-divider"></span>
+        Asesoría Virtual $100k · Presencial $150k
+      </p>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  /* === HERO SECTION === */
+  .hero-section {
+    position: relative;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  /* === BACKGROUND === */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(160deg, rgba(40, 7, 31, 0.25) 0%, rgba(40, 7, 31, 0.65) 40%, rgba(40, 7, 31, 0.95) 100%);
+  }
+
+  /* === DECORATIVE ORBS === */
+  .hero-orb {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-orb-right {
+    top: 15%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(154, 140, 91, 0.18) 0%, transparent 70%);
+  }
+
+  .hero-orb-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(40, 7, 31, 0.4), transparent);
+  }
+
+  /* === CONTENT === */
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 8rem 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* === DOUBLE-BEZEL BADGE === */
+  .hero-badge {
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.32, 0.72, 0, 1) 0.1s both;
+  }
+
+  .badge-outer {
+    display: inline-flex;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3rem;
+  }
+
+  .badge-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: calc(3rem - 3px);
+  }
+
+  .badge-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #9A8C5B;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .badge-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* === TITLE === */
+  .hero-title {
+    font-family: 'Noto Serif', serif;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 900;
+    color: white;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.32, 0.72, 0, 1) 0.2s both;
+  }
+
+  .hero-title-accent {
+    color: #9A8C5B;
+  }
+
+  /* === SUBTITLE === */
+  .hero-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    max-width: 480px;
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.32, 0.72, 0, 1) 0.3s both;
+  }
+
+  /* === CTA GROUP === */
+  .hero-cta-group {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.32, 0.72, 0, 1) 0.4s both;
+  }
+
+  /* Magnetic CTA Button */
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.125rem 2rem 1.125rem 2rem;
+    background: #9A8C5B;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+    box-shadow: 
+      0 8px 32px -4px rgba(154, 140, 91, 0.3),
+      0 2px 8px -2px rgba(154, 140, 91, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 
+      0 16px 48px -8px rgba(154, 140, 91, 0.4),
+      0 4px 16px -4px rgba(154, 140, 91, 0.3);
+  }
+
+  .hero-cta:hover::before {
+    opacity: 1;
+  }
+
+  .hero-cta:active {
+    transform: scale(0.98);
+  }
+
+  /* Nested trailing icon - Button-in-Button pattern */
+  .cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .hero-cta:hover .cta-icon {
+    transform: translate(2px, -2px) scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* CTA Note */
+  .hero-cta-note {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 1.5rem;
+  }
+
+  .cta-divider {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* === SCROLL INDICATOR === */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.32, 0.72, 0, 1) 0.6s both;
+  }
+
+  .scroll-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+  }
+
+  /* === ANIMATIONS === */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 7rem 1.25rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 10vw, 3.5rem);
+    }
+
+    .hero-cta {
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-orb-right {
+      width: 300px;
+      height: 300px;
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+  }
+</style>

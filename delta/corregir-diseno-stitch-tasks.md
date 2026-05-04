@@ -1,0 +1,50 @@
+# Delta: corregir-diseno-stitch-tasks
+- Propósito: Implementar la landing page exacta de Stitch siguiendo tokens y secciones solicitadas.
+- Riesgo: Moderado-alto (nuevo diseño global; requiere assets y validación visual)
+
+- Tarea 1: Actualizar tokens de color global.css
+  - Descripción: Añadir tokens exactos de Stitch: #401C34 (burdeos), #9A8C5B (beige), #fff8f9 (fondo claro)
+  - Archivos: src/assets/global.css o src/styles/global.css (según estructura actual)
+  - Criterios de aceptación:
+    - Variables o clases con los colores exactos definidas y usadas por componentes
+    - Asegurar contraste acorde a WCAG
+- Tarea 2: Navbar
+  - Descripción: Crear Navbar con logo "gavel" y botón "Contactar"
+  - Archivos: src/components/Navbar.astro
+  - Criterios de aceptación:
+    - Logo de gavel visible; enlace a sección de contacto o correo
+    - Botón Contactar con estilo Stitch; diseño responsive
+- Tarea 3: Hero
+  - Descripción: Crear Hero con imagen "Medellín", badge, gradiente y botones
+  - Archivos: src/components/Hero.astro
+- Tarea 4: TariffsSection
+  - Descripción: Implementar TariffsSection con opciones Virtual $100k y Presencial $150k
+  - Archivos: src/components/TariffsSection.astro
+- Tarea 5: PracticeAreasSection
+  - Descripción: Crear secciones para "Derecho de Daños" e "Insolvencia"
+  - Archivos: src/components/PracticeAreasSection.astro
+- Tarea 6: DistillationSection
+  - Descripción: Crear DistillationSection (guía de síntesis de servicios)
+  - Archivos: src/components/DistillationSection.astro
+- Tarea 7: ContactForm
+  - Descripción: Crear formulario de contacto
+  - Archivos: src/components/ContactForm.astro
+- Tarea 8: Footer
+  - Descripción: Crear Footer
+  - Archivos: src/components/Footer.astro
+- Tarea 9: Index
+  - Descripción: Actualizar index.astro para incluir todos los componentes anteriores
+  - Archivos: src/pages/index.astro
+- Tarea 10: Pruebas básicas y revisión visual
+  - Descripción: Revisión manual en dev y verificación de tokens
+  - Archivos: Todas las rutas y componentes mencionados
+- Entregables:
+  - delta/corregir-diseno-stitch-tasks.md
+- Riesgos y mitigaciones:
+  - Si no se cuentan con assets (imagen Medellín, logo), puede posponerse hasta confirmación
+- Dependencias y notas:
+  - Definir imágenes en src/assets, rutas de importación, y la ruta de contacto
+- Aprobación: Delivery: ask-on-risk
+
+Notas finales:
+- Este delta es la guía de implementación; no modifica código existente.

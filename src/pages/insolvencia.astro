@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/ui/Navbar.astro";
+import Footer from "../components/ui/Footer.astro";
+import ContactForm from "../components/islands/ContactForm.astro";
+---
+
+<Layout
+  title="Reestructuración Patrimonial e Insolvencia | Objetivo Legal"
+  description="Ley de Insolvencia en Colombia. Te ayudamos a reestructurar tus deudas y proteger tus activos. Abogados especializados en insolvencia empresarial y personal."
+>
+  <Navbar />
+
+  <main style="padding-top: 5rem;">
+    <!-- Hero -->
+    <section class="relative min-h-[751px] flex flex-col justify-end overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.pexels.com/photos/7876093/pexels-photo-7876093.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1080&w=1920" alt="Abogado en su despacho con estatua de la Justicia" class="w-full h-full object-cover grayscale-[20%] brightness-[40%]" />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/60 to-transparent lg:via-primary-container/40"></div>
+      </div>
+
+      <div style="padding: 4rem 1.5rem; max-width: 80rem; margin: 0 auto; width: 100%; position: relative; z-index: 10;">
+        <div style="max-width: 40rem;">
+          <!-- Badge -->
+          <div style="display: inline-block; padding: 0.25rem 0.75rem; margin-bottom: 1.5rem; background: rgba(154, 140, 91, 0.1); border-left: 2px solid var(--color-secondary);">
+            <span style="font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-secondary-fixed-dim, #d6c690);">Reestructuración Patrimonial</span>
+          </div>
+
+          <h1 style="font-family: 'Noto Serif', serif; font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 1.5rem;">
+            ¿Debes más de lo que puedes pagar?
+          </h1>
+
+          <p style="font-family: 'Manrope', sans-serif; font-size: 1.125rem; color: var(--color-surface-container-highest, #e9e0e3); line-height: 1.625; margin-bottom: 2.5rem; font-weight: 300;">
+            La Ley de Insolvencia 1116 de 2006 y la Ley 1380 de 2010 te ofrecen mecanismos de protección. Te acompañamos en todo el proceso para renegociar deudas, proteger tus bienes y empezar de nuevo con tranquilidad.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a href="#contacto" style="display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; background-color: var(--color-primary-container); color: white; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1rem; border-radius: 0.375rem; text-decoration: none; transition: background-color 0.3s;">
+              Consulta Gratis
+            </a>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6);">
+              Asesoría Formal: Virtual $100k | Presencial $150k
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section style="padding: 4rem 1.5rem; background-color: var(--color-surface-container-low);">
+      <div style="max-width: 80rem; margin: 0 auto;">
+        <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+          <div style="flex: 1 1 400px; min-width: 300px;">
+            <span style="display: inline-block; margin-bottom: 1rem; color: var(--color-secondary); font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+              Reestructuración Patrimonial
+            </span>
+            <h1 style="font-family: 'Noto Serif', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--color-primary-container); line-height: 1.2; margin-bottom: 1.5rem;">
+              ¿Debes más de lo que puedes pagar?
+            </h1>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 1.125rem; color: rgba(64, 28, 52, 0.7); line-height: 1.625; margin-bottom: 2rem;">
+              La Ley de Insolvencia 1116 de 2006 y la Ley 1380 de 2010 te ofrecen mecanismos de protección. Te acompañamos en todo el proceso para renegociar deudas, proteger tus bienes y empezar de nuevo con tranquilidad.
+            </p>
+            <a href="#contacto" style="display: inline-flex; align-items: center; padding: 1rem 2rem; background-color: var(--color-primary-container); color: white; font-family: 'Manrope', sans-serif; font-weight: 600; border-radius: 0.375rem; text-decoration: none; transition: background-color 0.2s;">
+              Consulta Gratis
+            </a>
+          </div>
+          <div style="flex: 1 1 400px; min-width: 300px; background-color: rgba(64, 28, 52, 0.05); border-radius: 1rem; padding: 2.5rem;">
+            <h2 style="font-family: 'Noto Serif', serif; font-size: 1.25rem; font-weight: 700; color: var(--color-primary-container); margin-bottom: 1.5rem;">¿Cómo podemos ayudarte?</h2>
+            <ul style="display: flex; flex-direction: column; gap: 1rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <span style="font-family: 'Manrope', sans-serif; color: rgba(64, 28, 52, 0.8);">Evaluación completa de tu situación financiera</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <span style="font-family: 'Manrope', sans-serif; color: rgba(64, 28, 52, 0.8);">Negociación con acreedores para acuerdos de pago</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <span style="font-family: 'Manrope', sans-serif; color: rgba(64, 28, 52, 0.8);">Gestión de procesos de reorganización judicial</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <span style="font-family: 'Manrope', sans-serif; color: rgba(64, 28, 52, 0.8);">Liquidación judicial ordenada de bienes</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span class="material-symbols-outlined" style="color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;">check_circle</span>
+                <span style="font-family: 'Manrope', sans-serif; color: rgba(64, 28, 52, 0.8);">Asesoramiento para personas naturales y empresas</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section style="padding: 4rem 1.5rem; background-color: var(--color-background);">
+      <div style="max-width: 48rem; margin: 0 auto;">
+        <h2 style="font-family: 'Noto Serif', serif; font-size: 1.875rem; font-weight: 700; color: var(--color-primary-container); margin-bottom: 2rem; text-align: center;">
+          ¿Qué es la Insolvencia?
+        </h2>
+
+        <p style="font-family: 'Manrope', sans-serif; color: var(--color-on-surface-variant); line-height: 1.625; margin-bottom: 1.5rem;">
+          La insolvencia es el estado en el que una persona natural o jurídica se encuentra cuando sus obligaciones dinerarias son superiores a sus activos y no puede pagarlas en los plazos pactados. La legislación colombiana ofrece mecanismos específicos para manejar esta situación.
+        </p>
+
+        <h3 style="font-family: 'Noto Serif', serif; font-size: 1.25rem; font-weight: 700; color: var(--color-primary-container); margin-top: 2.5rem; margin-bottom: 1rem;">Tipos de Insolvencia</h3>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div style="flex: 1 1 280px; padding: 1.5rem; background-color: var(--color-surface-container); border-radius: 0.75rem;">
+            <h4 style="font-family: 'Noto Serif', serif; font-weight: 700; color: var(--color-primary-container); margin-bottom: 0.5rem;">Persona Natural</h4>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">
+              Para personas naturales comerciantes y no comerciantes. Permite acuerdos de pago con acreedores y protección del patrimonio familiar.
+            </p>
+          </div>
+          <div style="flex: 1 1 280px; padding: 1.5rem; background-color: var(--color-surface-container); border-radius: 0.75rem;">
+            <h4 style="font-family: 'Noto Serif', serif; font-weight: 700; color: var(--color-primary-container); margin-bottom: 0.5rem;">Persona Jurídica</h4>
+            <p style="font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: var(--color-on-surface-variant);">
+              Empresas en dificultad financiera pueden acceder a reorganización judicial para reestructurar operaciones y deudas.
+            </p>
+          </div>
+        </div>
+
+        <h3 style="font-family: 'Noto Serif', serif; font-size: 1.25rem; font-weight: 700; color: var(--color-primary-container); margin-top: 2.5rem; margin-bottom: 1rem;">Nuestro Proceso</h3>
+
+        <ol style="display: flex; flex-direction: column; gap: 1rem; padding: 0; margin: 0; list-style: none;">
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">1</span>
+            <div><strong style="color: var(--color-primary-container);">Consulta inicial:</strong> Analizamos tu situación sin costo para determinar el mejor camino.</div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">2</span>
+            <div><strong style="color: var(--color-primary-container);">Estrategia personalizada:</strong> Diseñamos un plan legal adaptado a tus necesidades.</div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">3</span>
+            <div><strong style="color: var(--color-primary-container);">Negociación:</strong> Representamos tus intereses ante acreedores.</div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 1rem;">
+            <span style="flex-shrink: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-secondary); color: white; border-radius: 50%; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.75rem;">4</span>
+            <div><strong style="color: var(--color-primary-container);">Acuerdo y seguimiento:</strong> Formalizamos el acuerdo y acompañamos su cumplimiento.</div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 3rem 1.5rem; background-color: var(--color-primary-container);">
+      <div style="max-width: 80rem; margin: 0 auto; text-align: center;">
+        <h2 style="font-family: 'Noto Serif', serif; font-size: 1.875rem; font-weight: 700; color: white; margin-bottom: 1rem;">
+          ¿Necesitas ayuda con una situación de insolvencia?
+        </h2>
+        <p style="font-family: 'Manrope', sans-serif; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+          No enfrentas esta situación solo. Agenda una consulta gratuita.
+        </p>
+        <a href="#contacto" style="display: inline-flex; align-items: center; padding: 1rem 2rem; background-color: var(--color-secondary); color: white; font-family: 'Manrope', sans-serif; font-weight: 700; border-radius: 0.375rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: opacity 0.2s;">
+          Solicitar Consulta Gratuita
+        </a>
+      </div>
+    </section>
+
+    <ContactForm />
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,58 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+  href?: string;
+}
+
+const { title, description, icon, href = "#" } = Astro.props;
+---
+
+{href.startsWith("#") ? (
+  <div class="group relative p-8 bg-ivory rounded-2xl hover:bg-cream transition-all duration-300">
+    {icon && (
+      <div class="mb-4 text-4xl" aria-hidden="true">
+        {icon}
+      </div>
+    )}
+    <h3 class="text-xl font-serif font-bold text-plum mb-3 group-hover:text-gold transition-colors duration-200">
+      {title}
+    </h3>
+    <p class="font-sans text-plum/70 leading-relaxed">
+      {description}
+    </p>
+    <div class="mt-4 flex items-center text-gold font-sans text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+      Saber más
+      <svg class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  </div>
+) : (
+  <a href={href} class="group block p-8 bg-ivory rounded-2xl hover:bg-cream transition-all duration-300">
+    {icon && (
+      <div class="mb-4 text-4xl" aria-hidden="true">
+        {icon}
+      </div>
+    )}
+    <h3 class="text-xl font-serif font-bold text-plum mb-3 group-hover:text-gold transition-colors duration-200">
+      {title}
+    </h3>
+    <p class="font-sans text-plum/70 leading-relaxed">
+      {description}
+    </p>
+    <div class="mt-4 flex items-center text-gold font-sans text-sm font-medium">
+      Saber más
+      <svg class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  </a>
+)}
+
+<style>
+  a, div:not(.icon) {
+    text-decoration: none;
+  }
+</style>

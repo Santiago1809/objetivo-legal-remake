@@ -1,0 +1,257 @@
+---
+const items = [
+  {
+    icon: "verified",
+    title: "Pericia Local",
+    description: "Conocimiento profundo del sistema judicial antioqueño y más de 15 años de experiencia en casos similares al suyo."
+  },
+  {
+    icon: "trending_up",
+    title: "Enfoque en Resultados",
+    description: "Estrategias legales orientadas a obtener soluciones concretas y expeditas para su situación."
+  },
+  {
+    icon: "person_search",
+    title: "Servicio Personalizado",
+    description: "Atención directa del abogado titular, sin intermediarios, con dedicación exclusiva a cada caso."
+  }
+];
+---
+
+<!-- Premium Distillation Section - Editorial Asymmetric Layout -->
+<section class="distillation-section">
+  <div class="distillation-container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 class="section-title">Por qué elegirnos</h2>
+      <p class="section-subtitle">
+        La distilación de la justicia: experiencia y compromiso
+      </p>
+    </div>
+
+    <!-- Editorial Asymmetric Layout -->
+    <div class="editorial-grid">
+      {items.map((item, index) => (
+        <div 
+          class="item-card"
+          style={`--stagger-delay: ${0.15 + index * 0.12}s`}
+        >
+          <!-- Double-Bezel Container -->
+          <div class="card-bezel">
+            <div class="card-core">
+              <!-- Icon with glow -->
+              <div class="icon-wrapper">
+                <div class="icon-glow"></div>
+                {item.icon === "verified" && (
+                  <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                )}
+                {item.icon === "trending_up" && (
+                  <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                )}
+                {item.icon === "person_search" && (
+                  <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                )}
+              </div>
+
+              <!-- Title -->
+              <h3 class="item-title">{item.title}</h3>
+
+              <!-- Description -->
+              <p class="item-description">{item.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* === SECTION === */
+  .distillation-section {
+    padding: 7rem 1.5rem;
+    background: linear-gradient(180deg, #28071f 0%, #401c34 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Ambient glow */
+  .distillation-section::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(154, 140, 91, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .distillation-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif', serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 248, 249, 0.6);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* === EDITORIAL GRID === */
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* === DOUBLE-BEZEL ITEM CARD === */
+  .item-card {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.32, 0.72, 0, 1) calc(var(--stagger-delay)) both;
+  }
+
+  /* Outer Bezel */
+  .card-bezel {
+    padding: 3px;
+    background: rgba(154, 140, 91, 0.1);
+    border: 1px solid rgba(154, 140, 91, 0.15);
+    border-radius: 1.75rem;
+    transition: all 0.6s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .item-card:hover .card-bezel {
+    transform: translateY(-8px);
+    background: rgba(154, 140, 91, 0.15);
+    box-shadow: 0 24px 56px -8px rgba(154, 140, 91, 0.2);
+  }
+
+  /* Inner Core */
+  .card-core {
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: calc(1.75rem - 3px);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .item-card:hover .card-core {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* === ICON === */
+  .icon-wrapper {
+    position: relative;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(154, 140, 91, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: iconPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes iconPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+  }
+
+  .icon {
+    position: relative;
+    z-index: 1;
+    width: 2rem;
+    height: 2rem;
+    color: #9A8C5B;
+  }
+
+  /* === TYPOGRAPHY === */
+  .item-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.875rem;
+    letter-spacing: -0.01em;
+  }
+
+  .item-description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 248, 249, 0.7);
+    line-height: 1.65;
+  }
+
+  /* === ANIMATION === */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 900px) {
+    .editorial-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .distillation-section {
+      padding: 5rem 1.25rem;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .card-core {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
