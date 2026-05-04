@@ -17,5 +17,8 @@
     "astro": "^6.2.1",
     "nodemailer": "^8.0.7",
     "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^8.0.0"
   }
 }
